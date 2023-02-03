@@ -1,0 +1,15 @@
+name: zbchht
+runtime: yaml
+description: A minimal Azure Native Pulumi YAML program
+
+resources:
+  # Create an Azure resource (Storage Account)
+  staticWebApp:
+    type: azure-native:web:StaticSite
+    properties:
+      resourceGroupName: rg-zbchht-001
+      sku:
+        name: free
+        tier: free
+      allowConfigFileUpdates: true
+      
